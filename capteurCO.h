@@ -17,7 +17,7 @@ int dataCO() {
   CO = capteurCO.getPPM();
 
   // Affichage de la valeur de CO sur la console
-  Serial.print("Concentration en monoxyde de carbone:");
+  Serial.print("Concentration en monoxyde de carbone : ");
   Serial.print(CO);
   Serial.println(" ppm");
 

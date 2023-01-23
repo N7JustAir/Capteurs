@@ -17,7 +17,7 @@ int dataAirQuality() {
   airQuality = capteurAirQuality.getPPM();
 
   // Affichage de la valeur de la qualité de l'air sur la console
-  Serial.print("Qualite de l'air:");
+  Serial.print("Qualite de l'air : ");
   Serial.print(airQuality);
   Serial.println(" ppm");
 

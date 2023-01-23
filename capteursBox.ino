@@ -10,12 +10,14 @@
 // DEFINE
 #define CE 7
 #define CSN 8
+#define TUNNEL "PIPE1"
 
 
 // INITIALISATION DES VARIABLES
 RF24 radio(CE, CSN);
-const byte address[6] = "00001";
+const byte address[6] = TUNNEL;
 struct dataPackage {
+  int boxID = 1;
   int valueAirQuality;
   int valueCO;
 };
@@ -30,6 +32,7 @@ void setup() {
   // Initialisation de l'émetteur
   radio.begin();
   radio.openWritingPipe(address);
+  radio.setChannel(100);
   radio.setPALevel(RF24_PA_MIN);
   radio.stopListening();
 }
